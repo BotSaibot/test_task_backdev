@@ -1,0 +1,33 @@
+{
+    "build_systems":
+    [
+
+    ],
+    "folders":
+    [
+        {
+            "follow_symlinks": true,
+            "path": "."
+        }
+    ],
+    "settings":
+    {
+        "always_prompt_for_file_reload": false,
+        "caret_extra_bottom": 0,
+        "caret_extra_top": 0,
+        "default_line_ending": "unix",
+        "golang": {
+            "GOPATH": "D:/go",
+            "PATH": "D:/go/bin"
+        },
+        "native_tabs": "preferred",
+        "line_padding_bottom": -1,
+        "line_padding_top": -1,
+        "show_encoding": true,
+        "tab_size": 4,
+        "test_project_path": ".",
+        "translate_tabs_to_spaces": true,
+        "word_wrap": true,
+        "wrap_width": 79,
+    }
+}
