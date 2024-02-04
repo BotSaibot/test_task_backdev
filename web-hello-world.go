@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
 )
 
@@ -17,7 +18,7 @@ func main() {
 	servMux.HandleFunc("/route1/", route1Handler)
 	servMux.HandleFunc("/route2/", route2Handler)
 
-	http.ListenAndServe(":80", servMux)
+	log.Fatal(http.ListenAndServe(":8941", servMux))
 }
 
 func route1Handler(wrt http.ResponseWriter, req *http.Request) {
