@@ -21,12 +21,14 @@ func main() {
 	log.Fatal(http.ListenAndServe(":8941", servMux))
 }
 
+type reqMsg struct {
+	Msg  string `json:"msg"`
+	Par0 string `json:"parameter"`
+}
+
 func route1Handler(wrt http.ResponseWriter, req *http.Request) {
-	type reqMsg struct {
-		msg, par0 string `json:"text"`
-	}
 	msg := fmt.Sprintf("Route 1:\nHello, you've requested: %s\n", req.URL.Path)
-	js, err := json.Marshal(reqMsg{msg: msg, par0: "v any"})
+	js, err := json.MarshalIndent(reqMsg{Msg: msg, Par0: "v any"}, "", "\t")
 	if err != nil {
 		http.Error(wrt, err.Error(), http.StatusInternalServerError)
 		return
