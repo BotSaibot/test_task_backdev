@@ -1,0 +1,6 @@
+{
+    "ip": "",
+    "port": "8941",
+    "databaseURL": "mongodb://localhost:27017/",
+    "secret": "d0c2ce76-0485-46e2-b238-e566a743a791"
+}
